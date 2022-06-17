@@ -1,0 +1,62 @@
+﻿<Page x:Class="Van_Dip.YonPage.OsnP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Van_Dip.YonPage"
+      mc:Ignorable="d" 
+      Width="738" Height="524"
+      Title="OsnP">
+
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Foreground" Value="#FFDA291B"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF0845C9" Offset="0"/>
+                        <GradientStop Color="#FF0845C9" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="/FastType;component/./#Flow Ext"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Padding="10"   Width="{TemplateBinding Width}" CornerRadius="15" BorderThickness="5" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="#FF3E3E3E"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="35*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="35*"></RowDefinition>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="52*"></RowDefinition>
+            <RowDefinition Height="52*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="255*"></ColumnDefinition>
+            <ColumnDefinition Width="215*"></ColumnDefinition>
+            <ColumnDefinition Width="255*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Content="Добавить юнармейца"  Background="White"   FontWeight="Bold"   Grid.Row="5" Grid.ColumnSpan="3" Click="Button_Click_1" Margin="180,1.383,179,0.617"  />
+        <Button Content="Список юнармейцев" Background="White"  FontWeight="Bold"    Grid.Row="3" Grid.ColumnSpan="3" Margin="180,0.383,179,1.617" Click="Button_Click"  />
+        <Button Content="Руководители"  Background="White"   FontWeight="Bold"     Grid.ColumnSpan="3" Margin="181,100,178,39.617"  Grid.RowSpan="3" Click="Button_Click_2"  />
+    </Grid>
+</Page>
